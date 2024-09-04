@@ -35,12 +35,14 @@
 body {
   font: var(--text);
   color: var(--gray-500);
+  background-color: #16181D;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 100vh; /* Faz o main ocupar toda a altura da tela */
+  align-items: center; /* Faz o main ocupar toda a altura da tela */
   position: relative; /* Para que o conteúdo possa ser posicionado de forma relativa */
 }
 
@@ -59,9 +61,12 @@ main {
   text-align: center; /* Centraliza o texto e outros elementos no centro horizontalmente */
 }
 
+.top-content img {
+  margin-bottom: 56px;
+}
+
 h3 {
   font: var(--text-sub);
-  margin-top: 56px;
   color: var(--gray-500);
   
   span {
@@ -79,4 +84,97 @@ p {
   margin-top: 20px;
   font: var(--text-sm);
   color: var(--gray-400);
+}
+
+section {
+  margin-top: 80px;
+  display: flex;
+  gap: 16px;
+}
+
+section .card {
+  box-sizing: border-box;
+  height: 40px;
+  background-color: var(--gray-300);
+  border-radius: 999px;
+  padding-block: 8px;
+  padding-inline: 16px;
+  font: var(--text);
+
+  display: flex;
+  gap: 8px;
+  
+  img {
+  width: 24px;
+}
+}
+
+
+
+#arrow {
+  display: flex;
+  margin-top: 94px;
+}
+
+#destaques {
+  margin: 0;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  background-color: #16181D;
+}
+
+#destaques {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 72px;
+
+  h2 {
+    font: var(--title-md);
+    color: var(--gray-600);
+
+  }
+
+  span {
+    color: var(--red);
+    font: var(--text-sub);
+  }
+}
+
+#destaques img {
+  margin: 0;
+  width: 306px;
+  border-radius: 8px;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  width: 330px;
+  background-color: var(--gray-300);
+  border-radius: 12px;
+}
+
+figcaption {
+  padding: 4px;
+  h3 {
+   font: var(--title-sm);
+   margin-top: 20px;
+
+  }
+
+  p {
+    margin-top: 8px;
+  }
+}
+
+#cards {
+  margin-top: 56px;
+  margin-bottom: 144px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+  
 }
