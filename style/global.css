@@ -116,28 +116,26 @@ section .card {
   margin-top: 94px;
 }
 
-#destaques {
-  margin: 0;
-  position: relative;
-  justify-content: center;
-  width: 100%;
-  background-color: #16181D;
-}
 
 #destaques {
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 72px;
-
-  h2 {
-    font: var(--title-md);
-    color: var(--gray-600);
-
-  }
+  background-color: #16181D;
+  gap: 0;
 
   span {
     color: var(--red);
     font: var(--text-sub);
+    margin: 0;
+    margin-bottom: 8px; /* Espaçamento de 8px abaixo do span */
+  }
+
+  h2 {
+    font: var(--title-md);
+    color: var(--gray-600);
+    margin: 0;
   }
 }
 
@@ -147,25 +145,85 @@ section .card {
   border-radius: 8px;
 }
 
-figure {
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-  width: 330px;
-  background-color: var(--gray-300);
-  border-radius: 12px;
+#destaques {
+  figure {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    width: 330px;
+    background-color: var(--gray-300);
+    border-radius: 12px;
+    
+  }
+  
+  figcaption {
+    padding: 4px;
+    h3 {
+     font: var(--title-sm);
+     margin-top: 20px;
+  
+    }
+  
+    p {
+      margin-top: 8px;
+    }
+  }
 }
 
-figcaption {
-  padding: 4px;
-  h3 {
-   font: var(--title-sm);
-   margin-top: 20px;
 
+
+#servicos {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: var(--gray-100);
+  gap: 0;
+
+  span {
+    color: var(--red);
+    font: var(--text-sub);
+    margin-top: 88px;
+    margin-bottom: 8px; /* Espaçamento de 8px abaixo do span */
   }
 
-  p {
-    margin-top: 8px;
+  h2 {
+    font: var(--title-md);
+    color: var(--gray-600);
+    margin: 0;
+  }
+}
+
+#servicos img {
+  margin: 0;
+  width: 48px;
+  border-radius: 8px;
+}
+
+
+
+#cards-2 {
+  figure{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 280px;
+    background-color: var(--gray-100);
+    border-radius: 12px;
+    border: solid 2px var(--gray-200);
+    
+  }
+  figcaption {
+    h3 {
+     font: var(--title-sm);
+     margin-top: 20px;
+  
+    }
+  
+    p {
+      margin-top: 8px;
+    }
   }
 }
 
@@ -177,4 +235,31 @@ figcaption {
   grid-template-rows: repeat(2, 1fr);
   gap: 24px;
   
+}
+
+#cards-2 {
+  margin-top: 56px;
+  margin-bottom: 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+a:hover {
+  border: 2px solid ;
+  border-color: var(--gray-400);
+  box-shadow: none;
+  transform: none;
 }
